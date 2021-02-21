@@ -8,7 +8,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App/>
   </React.StrictMode>,
-  document.getElementById('container')
+  document.getElementById('calculator')
 );
 
 reportWebVitals();
