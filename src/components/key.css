@@ -7,11 +7,14 @@
     min-width: .6em;
     padding: .5em 0;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, .9);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, .6);
     color: #aaa;
     font-weight: bold;
     margin: .2em;
     outline: none;
+}
+.calc-key:hover{
+    color: #fff;
 }
 .calc-key.double{
     width: calc(40% - .4em);

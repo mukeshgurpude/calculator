@@ -6,6 +6,10 @@ class button extends React.Component{
         super(props);
         this.state = {};
         this.element = props.kwargs;
+        this.x = props.clear;
+        this.a = props.add;
+        this.e = props.evaluate;
+        this.state = {last: props.q};
         this.process = this.process.bind(this)
         this.addlisteners = this.addlisteners.bind(this);
         this.listener = this.listener.bind(this)
@@ -48,17 +52,27 @@ export class NumberKey extends button{
         this.p = "";
     }
     process(e){
-        console.log('Number key pressed: ', this.element.text)
+        this.a(this.element.text);
     }
 }
 
 export class OperatorKey extends button{
     constructor(props){
         super(props);
-        this.p = '';
+        this.p = props;
     }
     process(){
-        console.log('Utility Key: ', this.element.text)
+        switch(this.element.key){
+            case 'Backspace':
+                this.x();
+                break;
+            case '=':
+                this.e()
+                break;
+            default:
+                // this.a(this.element.text, this.state.last);
+                this.a(this.element.key, this.state.last);
+       }
     }
 }
 

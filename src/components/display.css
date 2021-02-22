@@ -1,9 +1,8 @@
 .display__wrapper{
     display: flex;
     flex-flow: nowrap column;
-    padding: .5em;
+    /* padding: .5em; */
     margin-bottom: .5em;
-    /* box-shadow: 0 0 0 2px rgba(0, 0, 0, .8); */
 }
 .display__wrapper img{
     width: 50px;
@@ -15,4 +14,5 @@
     font-weight: bold;
     padding: 1em 1em 1em 0;
     text-align: right;
+    user-select: none;
 }

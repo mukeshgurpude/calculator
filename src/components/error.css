@@ -1,0 +1,20 @@
+#error_block{
+    position: fixed;
+    left: 1em;
+    bottom: 1em;
+    gap: 1em;
+    z-index: 999 !important;
+    background-color: rgba(0, 0, 0, .8);
+    padding: 0 1em;
+    color: #fff;
+    align-items: center;
+}
+.close{
+    font-weight: bold;
+    color: rgba(0, 0, 0);
+    cursor: pointer;
+    font-size: 1.5em;
+    opacity: .8;
+    transition: all 100ms linear;
+}
+.close:hover{transform: scale(1.1); opacity: 1; color: #fff;}
