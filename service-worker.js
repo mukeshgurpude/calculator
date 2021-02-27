@@ -16,6 +16,9 @@ self.addEventListener('install', function(e){
         .then(cache=>{
             cache.addAll(pagesToCache);
         })
+        .catch(err=>{
+            console.log('An error occured: ', err)
+        })
     );
 })
 
@@ -44,6 +47,9 @@ self.addEventListener('fetch', e=>{
                                 .then(cache=>{
                                     cache.put(e.request, res.clone());
                                     return res;
+                                })
+                                .catch(err=>{
+                                    console.debug('An Error occured, ', err);
                                 })
                     })
         }).catch(err=>{
