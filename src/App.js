@@ -219,6 +219,7 @@ class App extends React.Component{
       if(String(this.state.expression).match(nonSafe)){
         throw new Error('Dangerous input, kindly check your input..');
       }
+      // eslint-disable-next-line
       result = eval(String(this.state.expression).replace('x', '*').replace('÷', '/').replace('^', '**'));
     }catch(err){
       console.warn(err)
@@ -254,7 +255,7 @@ class App extends React.Component{
     return (
       <>
       <header className="display__wrapper">
-        <div><img src={logo} alt="logo"/></div>
+        <div><img src={logo} alt="Calculator-logo" width="auto" height="auto"/></div>
         <Display text={this.state.expression} add={this.addToDisplay}/>
       </header>
       <div id="keys">

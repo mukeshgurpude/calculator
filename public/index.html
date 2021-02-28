@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#4f4" />
+    <meta name="theme-color" content="#44f" />
     <meta name="description" content="A calculator app"/>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -16,6 +16,13 @@
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" async defer></script>
     <script>
       const projectName = "javascript-calculator";
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.register("%PUBLIC_URL%/service-worker.js").then(e=>{
+          // console.debug("Successful\n", e);
+        }).catch(err=>{
+          console.debug('Service worker registration failed: ', err)
+        })
+      }
     </script>
   </body>
 </html>
