@@ -1,10 +1,9 @@
+const base = '/calculator';
 const pagesToCache = [
     '/',
-    '/calculator/static/js/bundle.js',
-    '/calculator',
     '/offline.html',
     '/404.html'
-];
+].map(p=>base + p);
 
 const cacheStorageName = 'calc-v1';
 
