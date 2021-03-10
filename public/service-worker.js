@@ -1,6 +1,6 @@
 const pagesToCache = [
     '/',
-    'static/js/main.chunk.js',
+    '/calculator/static/js/bundle.js',
     '/calculator',
     '/offline.html',
     '/404.html'
