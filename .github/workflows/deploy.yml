@@ -2,7 +2,7 @@ name: Deploy to GH-Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main deploy ]
 
   workflow_dispatch:
 
@@ -18,6 +18,11 @@ jobs:
 
       - name: Build project
         run: yarn build
+      
+      - name: Quick setup
+        run: |
+          git config --global user.name "Mukesh Gurpude"
+          git config --global user.email "mukeshgurpude02@gmail.com"
 
       - name: Deploy
         run: yarn deploy
