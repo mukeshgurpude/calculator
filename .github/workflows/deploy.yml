@@ -27,4 +27,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy
-        run: yarn deploy
+        run: |
+          yarn build
+          yarn deploy
