@@ -218,6 +218,7 @@ class App extends React.Component{
       const nonSafe = /[a-wyz;]/;
       if(String(this.state.expression).match(nonSafe)){
         throw new Error('Dangerous input, kindly check your input..');
+        this.clearDisplay();
       }
       // eslint-disable-next-line
       result = eval(String(this.state.expression).replace('x', '*').replace('÷', '/').replace('^', '**'));
